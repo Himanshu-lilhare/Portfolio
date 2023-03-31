@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import projectimg from "../assets/Images/project.jpg";
+// import projectimg from "../assets/Images/project.jpg";
 import { ProjectsData } from "../data/ProjectData";
 import Anchor from "../subComponents/Anchor";
 import Logo from "../subComponents/Logo";
