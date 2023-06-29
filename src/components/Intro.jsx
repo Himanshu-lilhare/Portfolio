@@ -86,7 +86,7 @@ const SubBox = styled.div`
 `;
 const Text = styled.div`
   padding-left: 2rem;
-  font-size: calc(0.5em + 1.5vw);
+  font-size: calc(0.5em + 1.2vw);
   color: white;
   cursor: pointer;
   display: flex;

@@ -50,6 +50,7 @@ const Blog = styled(Link)`
   top: 50%;
   transform: translate(-50%, -50%);
   right: 1rem;
+  font-size: 12px;
   text-decoration: none;
   z-index: 1;
 
@@ -68,7 +69,7 @@ const About = styled(Link)`
   left: 4.5rem;
   text-decoration: none;
   z-index: 1;
-
+font-size: 12px;
   @media only screen and (max-width: 791px) {
     transform: rotate(-90deg);
     left: -0.5rem;
@@ -105,7 +106,7 @@ const Projects = styled(Link)`
   text-decoration: none;
   width: 80px;
   z-index: 1;
-
+  font-size: 14px;
   animation: ${position} 1.5s linear;
 
   span {
@@ -128,6 +129,7 @@ const Skills = styled(Link)`
   /* color:${(props) =>
     props.clicked ? props.theme.body : props.theme.text}; */
   text-decoration: none;
+  font-size: 14px;
   animation: ${position} 1.5s linear 1s;
 
   span {
