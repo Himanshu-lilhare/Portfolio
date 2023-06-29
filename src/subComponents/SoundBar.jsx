@@ -10,7 +10,7 @@ const Box = styled.div`
   display: flex;
   cursor: pointer;
   position: fixed;
-  color: white;
+  color: #9292924a;
   width: 29px;
   height: 25px;
   top: 2.7rem;

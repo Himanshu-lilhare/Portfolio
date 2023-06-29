@@ -11,7 +11,7 @@ position: fixed; top: 2rem; left: 1.5rem; z-index: 3;
      font-size: 24px;
      font-weight: 600;
      left: 0.5rem;
-     top: 2.3rem;
+     top: 2.1rem;
   }
 @media  only screen and (max-width:357px){
   font-size: 19px;

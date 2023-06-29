@@ -40,7 +40,12 @@ const Contact = styled.a`
     @media only screen and (max-width: 791px) {
       color: ${(props) => props.clicked && props.theme.body};
       font-size: 16px;
+ 
     }
+  }
+  @media only screen and (max-width: 791px) {
+    top: 2rem;
+ right: 0.6rem;
   }
 `;
 const Blog = styled(Link)`
