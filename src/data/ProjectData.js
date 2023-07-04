@@ -17,7 +17,9 @@ export const ProjectsData = [
         id:2,
         name:"Fully Fledge Social Media app wih Amazing Features ",
         tags:["html","css","javaScript","React","node Js","Express JS","ScSS","MongoDb Atlas"],
-        
+        link:'https://social-media-frontend-omega.vercel.app/',
+        codeLink:'https://github.com/Himanshu-lilhare/social-media-frontend',
+       
         imgSrc:img2,
         
     },

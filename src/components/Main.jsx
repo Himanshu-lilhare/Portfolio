@@ -40,12 +40,11 @@ const Contact = styled.a`
     @media only screen and (max-width: 791px) {
       color: ${(props) => props.clicked && props.theme.body};
       font-size: 16px;
- 
     }
   }
   @media only screen and (max-width: 791px) {
     top: 2rem;
- right: 0.6rem;
+    right: 0.6rem;
   }
 `;
 const Blog = styled(Link)`
@@ -74,7 +73,7 @@ const About = styled(Link)`
   left: 4.5rem;
   text-decoration: none;
   z-index: 1;
-font-size: 12px;
+  font-size: 12px;
   @media only screen and (max-width: 791px) {
     transform: rotate(-90deg);
     left: -0.5rem;
@@ -232,14 +231,13 @@ const DarkDiv = styled.div`
 const AnimateMouse = styled.div``;
 
 const Main = ({ setClick }) => {
-
   const click = useContext(CreateContext);
   const moveRef = useRef(AnimateMouse);
-  
-  const windowWidth=useMotionValue(window.innerWidth)
-  
-  const isSmallViewPort=useTransform(windowWidth,(window)=> window <= 791 )
-  console.log(isSmallViewPort.get())
+
+  const windowWidth = useMotionValue(window.innerWidth);
+
+  const isSmallViewPort = useTransform(windowWidth, (window) => window <= 791);
+  console.log(isSmallViewPort.get());
   function handleCenter() {
     setClick((prev) => !prev);
   }
@@ -268,9 +266,9 @@ z-index:10;
           href="mailto:rajlilhare200@gmail.com"
         >
           <motion.h3
-            initial={{y: -200} }
+            initial={{ y: -200 }}
             transition={{ type: "spring", duration: 1.5, delay: 1 }}
-            animate={{y:0}}
+            animate={{ y: 0 }}
           >
             say Hi
           </motion.h3>
@@ -294,18 +292,18 @@ z-index:10;
           }}
         >
           <motion.h3
-          initial={isSmallViewPort.get() ? {y: -200} : {x:200}}
-          transition={{ type: "spring", duration: 1.5, delay: 1 }}
-          animate={isSmallViewPort.get() ? {y: 0} : {x:0}}
+            initial={isSmallViewPort.get() ? { y: -200 } : { x: 200 }}
+            transition={{ type: "spring", duration: 1.5, delay: 1 }}
+            animate={isSmallViewPort.get() ? { y: 0 } : { x: 0 }}
           >
             BLOG
           </motion.h3>
         </Blog>
         <About to="/about" clicked={click}>
           <motion.h3
-            initial={isSmallViewPort.get() ? {y: -200} : {x:-200}}
+            initial={isSmallViewPort.get() ? { y: -200 } : { x: -200 }}
             transition={{ type: "spring", duration: 1.5, delay: 1 }}
-            animate={isSmallViewPort.get() ? {y: 0} : {x:0}}
+            animate={isSmallViewPort.get() ? { y: 0 } : { x: 0 }}
           >
             ABOUT
           </motion.h3>
