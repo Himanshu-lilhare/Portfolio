@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BsInstagram, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsTwitter, BsYoutube,BsGithub } from "react-icons/bs";
 import { darkTheme } from "../components/Themes";
 import { motion } from "framer-motion";
 
@@ -91,9 +91,9 @@ const SocialMediaIcons = (props) => {
         <a
           style={{ color: `${props.theme === "dark" ? "white" : "black"}` }}
           target="_blank"
-          href="https://www.youtube.com/channel/UCDawYeJt95F2-cwc6JqfS2w"
+          href="https://github.com/Himanshu-lilhare"
         >
-          <BsYoutube style={{ fontSize: "23px" }} />
+          <BsGithub style={{ fontSize: "23px" }} />
         </a>
       </motion.div>
       <motion.div
