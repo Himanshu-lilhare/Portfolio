@@ -111,7 +111,7 @@ const Projects = styled(Link)`
   width: 80px;
   z-index: 1;
   font-size: 14px;
-  animation: ${position} 1.5s linear;
+  /* animation: ${position} 1.5s linear; */
 
   span {
     color: ${(props) => (props.clicked ? props.theme.body : props.theme.text)};
@@ -134,7 +134,7 @@ const Skills = styled(Link)`
     props.clicked ? props.theme.body : props.theme.text}; */
   text-decoration: none;
   font-size: 14px;
-  animation: ${position} 1.5s linear 1s;
+  /* animation: ${position} 1.5s linear 1s; */
 
   span {
     color: ${(props) => props.theme.text};
@@ -230,6 +230,9 @@ const DarkDiv = styled.div`
 
 const AnimateMouse = styled.div``;
 
+const AnimateSkill = motion(Skills);
+const AnimateProject = motion(Projects);
+
 const Main = ({ setClick }) => {
   const click = useContext(CreateContext);
   const moveRef = useRef(AnimateMouse);
@@ -310,28 +313,24 @@ z-index:10;
         </About>
 
         <BottomBar>
-          <Projects to="/projects" clicked={click}>
-            <motion.span
-              initial={{ y: 200 }}
-              transition={{ type: "spring", duration: 1.5, delay: 1 }}
-              animate={{ y: 0 }}
-            >
-              PROJECTS
-            </motion.span>
-            {/* <div className='liquid'>
+          <AnimateProject
+            to="/projects"
+            clicked={click}
+            initial={{ y: 200 }}
+            transition={{ type: "spring", duration: 1.5, delay: 1 }}
+            animate={{ y: 0 }}
+          >
+            <motion.span>PROJECTS</motion.span>
+          </AnimateProject>
 
-   </div> */}
-          </Projects>
-
-          <Skills to="/skills">
-            <motion.span
-              initial={{ y: 200 }}
-              transition={{ type: "spring", duration: 1.5, delay: 1 }}
-              animate={{ y: 0 }}
-            >
-              SKILLS
-            </motion.span>
-          </Skills>
+          <AnimateSkill
+            to="/skills"
+            initial={{ y: 200 }}
+            transition={{ type: "spring", duration: 1.5, delay: 1 }}
+            animate={{ y: 0 }}
+          >
+            <motion.span>SKILLS</motion.span>
+          </AnimateSkill>
         </BottomBar>
       </Container>
       {click ? <Intro /> : null}
