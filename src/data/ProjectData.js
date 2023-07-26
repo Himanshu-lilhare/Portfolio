@@ -8,7 +8,7 @@ export const ProjectsData = [
         id:1,
         name:"Paid Course Website with Awesome Admin Panel . Its Totally An StartUp",
         tags:["Reatc,JavaScript","ChakRa Ui","Node Js","Expres Js","MongoDb Atlas"],
-        link:'"""""""""""""""""""""""',
+        link:'https://course-selling-frontend.vercel.app/',
         codeLink:'https://github.com/Himanshu-lilhare/my-startup-frontend',
         imgSrc:img1,
        
