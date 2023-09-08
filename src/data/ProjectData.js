@@ -1,4 +1,4 @@
-import { css } from "styled-components"
+
 import img1 from "../assets/Images/portfolioimg.jpeg"
 import img2 from "../assets/Images/portfolioimg2.jpeg"
 
@@ -23,5 +23,6 @@ export const ProjectsData = [
         imgSrc:img2,
         
     },
+  
   
  ] 
