@@ -8,17 +8,15 @@ import SocialMediaIcons from "../subComponents/SocialMediaIcons";
 import ProjectComp from "./ProjectComp";
 
 const MainContainer = styled.div`
- position: relative;
+  position: relative;
   min-height: calc(100vh - 5rem);
   padding: 5rem 1rem;
   display: flex;
   justify-content: center;
- 
 `;
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
-
-
+ height:fit-content;
   flex-wrap: wrap;
 `;
 
