@@ -1,28 +1,50 @@
-
-import img1 from "../assets/Images/portfolioimg.jpeg"
-import img2 from "../assets/Images/portfolioimg2.jpeg"
-
+import img1 from "../assets/Images/portfolioimg.jpeg";
+import img2 from "../assets/Images/portfolioimg2.jpeg";
 
 export const ProjectsData = [
-    {
-        id:1,
-        name:"Paid Course Website with Awesome Admin Panel",
-        tags:["Reatc, Mongodb , Express js , ChakraUI , Cloudinary"],
-        link:'https://course-selling-frontend.vercel.app/',
-        codeLink:'https://github.com/Himanshu-lilhare/my-startup-frontend',
-        imgSrc:img1,
-       
-    },
-    {
-        id:2,
-        name:"Fully Fledge Social Media app wih Amazing Features ",
-        tags:["html","css","javaScript","React","node Js","Express JS","ScSS","MongoDb Atlas"],
-        link:'https://social-media-frontend-omega.vercel.app/',
-        codeLink:'https://github.com/Himanshu-lilhare/social-media-frontend',
-       
-        imgSrc:img2,
-        
-    },
-  
-  
- ] 
+  {
+    id: 1,
+    name: "Paid Course Website with Awesome Admin Panel",
+    tags: ["Reatc, Mongodb , Express js , ChakraUI , Cloudinary"],
+    link: "https://course-selling-frontend.vercel.app/",
+    codeLink: "https://github.com/Himanshu-lilhare/my-startup-frontend",
+    imgSrc: img1,
+    category: "Fullstack , React , Nodejs , Frontend , Backend",
+  },
+  {
+    id: 2,
+    name: "Fully Fledge Social Media app wih Amazing Features ",
+    tags: [
+      "html",
+      "css",
+      "javaScript",
+      "React",
+      "node Js",
+      "Express JS",
+      "ScSS",
+      "MongoDb Atlas",
+    ],
+    link: "https://social-media-frontend-omega.vercel.app/",
+    codeLink: "https://github.com/Himanshu-lilhare/social-media-frontend",
+    imgSrc: img2,
+    category: "Fullstack , React , Frontend , Backend",
+  },
+];
+
+export function filteruniqueCategory(data) {
+  let string = "";
+  data.forEach((item, index) => {
+    if (index === 0) {
+      string = string + item.category;
+    } else {
+      string = string + " , " + item.category;
+    }
+  });
+
+  const uniqueArray = string
+    .split(",")
+    .map((item) => item.trim())
+    .filter((value, index, self) => self.indexOf(value) === index);
+ uniqueArray.unshift("All")
+  return uniqueArray;
+}

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ProjectsData } from "../data/ProjectData";
+import { ProjectsData,filteruniqueCategory } from "../data/ProjectData";
 import Anchor from "../subComponents/Anchor";
 import Logo from "../subComponents/Logo";
 import PowerButton from "../subComponents/PowerButton";
 import SocialMediaIcons from "../subComponents/SocialMediaIcons";
 import ProjectComp from "./ProjectComp";
+import FilterBar from "./FilterBar";
 
 const MainContainer = styled.div`
   position: relative;
@@ -13,26 +14,27 @@ const MainContainer = styled.div`
   padding: 5rem 1rem;
   display: flex;
   justify-content: center;
-`;
-const Container = styled.div`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
- height:fit-content;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const Projects = () => {
+
+ const uniqueCategories  = filteruniqueCategory(ProjectsData)
+ const [category,setCategory] = useState(uniqueCategories[0])
+ 
+
+
   return (
     <MainContainer>
-      <Container>
-        <Logo />
-        <SocialMediaIcons />
-        <Anchor />
-        <PowerButton />
-
-        {ProjectsData.map((ele, index) => {
-          return <ProjectComp id={index + 100} data={ele} />;
-        })}
-      </Container>
+      <Logo />
+      <SocialMediaIcons />
+      <Anchor />
+      <PowerButton />
+       <FilterBar key={Math.random()} setcategory={setCategory} category={category} uniqueCategories={uniqueCategories}/>
+      {ProjectsData.map((ele, index) => {
+        return <ProjectComp  id={index + 100} data={ele} category={category} />;
+      })}
     </MainContainer>
   );
 };

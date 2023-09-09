@@ -13,7 +13,7 @@ to{
 const Box = styled.div`
   width: 300px;
   height: 300px;
-  box-shadow: 0px 0rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0rem 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
   padding: 2px;
@@ -27,7 +27,10 @@ const Box = styled.div`
   transition: all 0.4s ease;
   overflow: hidden;
   
-
+   @media only screen and (max-width: 400px) {
+    width: 250px;
+  height: 250px;
+   }
   &::before {
     content: "";
     z-index: 1;
@@ -60,9 +63,7 @@ const Image = styled.div`
   width: 100%;
   height: 60%;
   border: 2px solid black;
-  // @media only screen and (max-width: 370px) {
-  //   height: 40%;
-  // }
+
 
   ${Box}:hover & {
     background-position: bottom;
@@ -107,23 +108,24 @@ const NavButton = styled.a`
 const ProjectComp = (props) => {
   const { name, imgSrc, link, codeLink } = props.data;
 
-  return (
-    <Box>
-      <div className="innerdiv">
-        <Image imgsrc={imgSrc} />
+  if(props.data.category.includes(props.category)){
+  return   <Box>
+  <div className="innerdiv">
+    <Image imgsrc={imgSrc} />
 
-        <Title>{name}</Title>
-        <ButtonContainer>
-          <NavButton target="_blank" href={link}>
-            Live
-          </NavButton>
-          <NavButton target="_blank" href={codeLink}>
-            Code
-          </NavButton>
-        </ButtonContainer>
-      </div>
-    </Box>
-  );
+    <Title>{name}</Title>
+    <ButtonContainer>
+      <NavButton target="_blank" href={link}>
+        Live
+      </NavButton>
+      <NavButton target="_blank" href={codeLink}>
+        Code
+      </NavButton>
+    </ButtonContainer>
+  </div>
+</Box>
+  }
+ 
 };
 
 export default ProjectComp;
