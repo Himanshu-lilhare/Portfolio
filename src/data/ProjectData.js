@@ -9,7 +9,7 @@ export const ProjectsData = [
     link: "https://course-selling-frontend.vercel.app/",
     codeLink: "https://github.com/Himanshu-lilhare/my-startup-frontend",
     imgSrc: img1,
-    category: "Fullstack , React , Nodejs , Frontend , Backend",
+    category: "All , MernStack , React , Nodejs",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const ProjectsData = [
     link: "https://social-media-frontend-omega.vercel.app/",
     codeLink: "https://github.com/Himanshu-lilhare/social-media-frontend",
     imgSrc: img2,
-    category: "Fullstack , React , Frontend , Backend",
+    category: "All , MernStack , React , Nodejs",
   },
 ];
 
@@ -45,6 +45,6 @@ export function filteruniqueCategory(data) {
     .split(",")
     .map((item) => item.trim())
     .filter((value, index, self) => self.indexOf(value) === index);
- uniqueArray.unshift("All")
+
   return uniqueArray;
 }

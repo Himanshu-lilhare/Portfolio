@@ -26,11 +26,11 @@ const Box = styled.div`
   justify-content: center;
   transition: all 0.4s ease;
   overflow: hidden;
-  
-   @media only screen and (max-width: 400px) {
+
+  @media only screen and (max-width: 400px) {
     width: 250px;
-  height: 250px;
-   }
+    height: 250px;
+  }
   &::before {
     content: "";
     z-index: 1;
@@ -63,7 +63,6 @@ const Image = styled.div`
   width: 100%;
   height: 60%;
   border: 2px solid black;
-
 
   ${Box}:hover & {
     background-position: bottom;
@@ -107,25 +106,43 @@ const NavButton = styled.a`
 
 const ProjectComp = (props) => {
   const { name, imgSrc, link, codeLink } = props.data;
+  console.log("aaya bhai")
+  if(props.category==="All"){
+    return  <Box>
+    <div className="innerdiv">
+      <Image imgsrc={imgSrc} />
 
-  if(props.data.category.includes(props.category)){
-  return   <Box>
-  <div className="innerdiv">
-    <Image imgsrc={imgSrc} />
-
-    <Title>{name}</Title>
-    <ButtonContainer>
-      <NavButton target="_blank" href={link}>
-        Live
-      </NavButton>
-      <NavButton target="_blank" href={codeLink}>
-        Code
-      </NavButton>
-    </ButtonContainer>
-  </div>
-</Box>
+      <Title>{name}</Title>
+      <ButtonContainer>
+        <NavButton target="_blank" href={link}>
+          Live
+        </NavButton>
+        <NavButton target="_blank" href={codeLink}>
+          Code
+        </NavButton>
+      </ButtonContainer>
+    </div>
+  </Box>
   }
- 
+  if (props.data.category.includes(props.category)) {
+    return (
+      <Box>
+        <div className="innerdiv">
+          <Image imgsrc={imgSrc} />
+
+          <Title>{name}</Title>
+          <ButtonContainer>
+            <NavButton target="_blank" href={link}>
+              Live
+            </NavButton>
+            <NavButton target="_blank" href={codeLink}>
+              Code
+            </NavButton>
+          </ButtonContainer>
+        </div>
+      </Box>
+    );
+  }
 };
 
 export default ProjectComp;

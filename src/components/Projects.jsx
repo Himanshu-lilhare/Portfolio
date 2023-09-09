@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ProjectsData,filteruniqueCategory } from "../data/ProjectData";
 import Anchor from "../subComponents/Anchor";
@@ -16,12 +16,11 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1rem;
 `;
-
+const uniqueCategories  = filteruniqueCategory(ProjectsData)
 const Projects = () => {
-
- const uniqueCategories  = filteruniqueCategory(ProjectsData)
- const [category,setCategory] = useState(uniqueCategories[0])
+const [category,setCategory] = useState(uniqueCategories[0])
  
 
 
@@ -31,7 +30,7 @@ const Projects = () => {
       <SocialMediaIcons />
       <Anchor />
       <PowerButton />
-       <FilterBar key={Math.random()} setcategory={setCategory} category={category} uniqueCategories={uniqueCategories}/>
+       <FilterBar setcategory={setCategory} category={category} uniqueCategories={uniqueCategories}/>
       {ProjectsData.map((ele, index) => {
         return <ProjectComp  id={index + 100} data={ele} category={category} />;
       })}
