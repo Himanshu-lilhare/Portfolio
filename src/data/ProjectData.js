@@ -21,8 +21,8 @@ export const ProjectsData = [
   {
     id: 3,
     name: "Basic Todo List using LocalStorage",
-    link: "https://social-media-frontend-omega.vercel.app/",
-    codeLink: "https://github.com/Himanshu-lilhare/social-media-frontend",
+    link: "https://vercel.com/himanshu-lilhare/zakarpakar-todolist",
+    codeLink: "https://github.com/Himanshu-lilhare/ZAKARPAKAR-todolist",
     imgSrc: img2,
     category: "All , React",
   },
