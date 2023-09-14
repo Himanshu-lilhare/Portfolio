@@ -8,7 +8,7 @@ export const ProjectsData = [
     link: "https://course-selling-frontend.vercel.app/",
     codeLink: "https://github.com/Himanshu-lilhare/my-startup-frontend",
     imgSrc: img1,
-    category: "All , MernStack , React , Nodejs",
+    category: "All , MernStack",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const ProjectsData = [
     link: "https://social-media-frontend-omega.vercel.app/",
     codeLink: "https://github.com/Himanshu-lilhare/social-media-frontend",
     imgSrc: img2,
-    category: "All , MernStack , React , Nodejs",
+    category: "All , MernStack",
   },
   {
     id: 3,
