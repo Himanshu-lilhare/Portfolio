@@ -5,7 +5,6 @@ export const ProjectsData = [
   {
     id: 1,
     name: "Paid Course Website with Awesome Admin Panel",
-    tags: ["Reatc, Mongodb , Express js , ChakraUI , Cloudinary"],
     link: "https://course-selling-frontend.vercel.app/",
     codeLink: "https://github.com/Himanshu-lilhare/my-startup-frontend",
     imgSrc: img1,
@@ -14,20 +13,18 @@ export const ProjectsData = [
   {
     id: 2,
     name: "Fully Fledge Social Media app wih Amazing Features ",
-    tags: [
-      "html",
-      "css",
-      "javaScript",
-      "React",
-      "node Js",
-      "Express JS",
-      "ScSS",
-      "MongoDb Atlas",
-    ],
     link: "https://social-media-frontend-omega.vercel.app/",
     codeLink: "https://github.com/Himanshu-lilhare/social-media-frontend",
     imgSrc: img2,
     category: "All , MernStack , React , Nodejs",
+  },
+  {
+    id: 3,
+    name: "Basic Todo List using LocalStorage",
+    link: "https://social-media-frontend-omega.vercel.app/",
+    codeLink: "https://github.com/Himanshu-lilhare/social-media-frontend",
+    imgSrc: img2,
+    category: "All , React",
   },
 ];
 
